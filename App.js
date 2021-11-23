@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import Hoc from './src/hoc';
+import { StockList } from './src/screens/views/stock-list.view';
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StockList></StockList>
     </View>
   );
 }
 
+//<Text>Higher-orderComponent Tutorial</Text>
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 });
+
+export default App;//Hoc(App);
