@@ -6,7 +6,7 @@ import { TableRow } from './table-row.view';
 class StockList extends Component{
     constructor(props) {
         super(props);
-        this.state = {
+        /*this.state = {
             stocks: [
                 {
                     id: 1,
@@ -21,7 +21,7 @@ class StockList extends Component{
                     name: 'Reliance'
                 }
             ]
-        };
+        };*/
     }
 /*
     constructor(props) {
@@ -39,8 +39,8 @@ class StockList extends Component{
       }
 */
     tabRow(){
-        if(this.state.stocks instanceof Array) {
-            return this.state.stocks.map((object, i) => {
+        if(this.props.data instanceof Array) {
+            return this.props.data.map((object, i) => {
                 return [object.id, object.name];
                 //return <TableRow obj={object} key={i} />;
             })
@@ -55,8 +55,7 @@ class StockList extends Component{
         </Table>
       </View>
     }*/
-    render() {
-        const state = this.state;
+    render() {        
         return (
           <View style={styles.container}>            
             <Table borderStyle={styles.borderStyle}>
