@@ -6,29 +6,12 @@ import { TableRow } from './table-row.view';
 class UserList extends Component{
     constructor(props){
         super(props);
-        /*this.state = {
-            users: [
-                {
-                    id: 1,
-                    name: 'Krunal'
-                },
-                {
-                    id: 2,
-                    name: 'Ankit'
-                },
-                {
-                    id: 3,
-                    name: 'Rushabh'
-                }
-            ]
-        };*/
     }
 
     tabRow(){
         if(this.props.data instanceof Array) {
             return this.props.data.map((object, i) => {
-                return [object.id, object.name];
-                //return <TableRow obj={object} key={i} />;
+                return [object.id, object.name];                
             })
         }
     }
